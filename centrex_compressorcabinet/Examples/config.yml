@@ -1,0 +1,140 @@
+Networking:
+  publisher port: 1234
+  control port: 1235
+
+Name: "CeNTREX Compresssor Cabinet"
+
+GUI:
+  dt: 0.5
+
+Devices:
+
+  Backing pump 1:
+    driver: nXDS
+    dt: 1
+    construction parameters:
+      resource_name: ""
+    deque_length: 1_000
+    GUI:
+      column: 0
+      row: 0
+      Controls:
+        start_pump:
+          type: button
+          functions:
+            - start
+            - stop
+          status: running
+          values:
+            - false
+            - true
+          labels:
+            - "Start"
+            - "Stop"
+          colors:
+            - "danger"
+            - "success"
+          really_sure: True
+  Backing pump 2:
+    driver: nXDS
+    dt: 1
+    construction parameters:
+      resource_name: ""
+    deque_length: 1_000
+    GUI:
+      column: 1
+      row: 0
+      Controls:
+        start_pump:
+          type: button
+          functions:
+            - start
+            - stop
+          status: running
+          values:
+            - false
+            - true
+          labels:
+            - "Start"
+            - "Stop"
+          colors:
+            - "danger"
+            - "success"
+
+  Backing pump 3:
+    driver: nXDS
+    dt: 1
+    construction parameters:
+      resource_name: ""
+    deque_length: 1_000
+    GUI:
+      column: 2
+      row: 0
+      Controls:
+        start_pump:
+          type: button
+          functions:
+            - start
+            - stop
+          status: running
+          values:
+            - false
+            - true
+          labels:
+            - "Start"
+            - "Stop"
+          colors:
+            - "danger"
+            - "success"
+
+  Compressor 1:
+    driver: CPA1110
+    dt: 1
+    construction parameters:
+      resource_name: ""
+    deque_length: 1_000
+    GUI:
+      column: 0
+      row: 1
+      Controls:
+        start_compressor:
+          type: button
+          functions:
+            - start
+            - stop
+          status: running
+          values:
+            - false
+            - true
+          labels:
+            - "Start"
+            - "Stop"
+          colors:
+            - "danger"
+            - "success"
+
+  Compressor 2:
+    driver: CPA1110
+    dt: 1
+    construction parameters:
+      resource_name: ""
+    deque_length: 1_000
+    GUI:
+      column: 1
+      row: 1
+      Controls:
+        start_compressor:
+          type: button
+          functions:
+            - start
+            - stop
+          status: running
+          values:
+            - false
+            - true
+          labels:
+            - "Start"
+            - "Stop"
+          colors:
+            - "danger"
+            - "success"
